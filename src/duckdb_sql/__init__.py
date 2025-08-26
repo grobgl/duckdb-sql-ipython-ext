@@ -23,6 +23,7 @@ def load_ipython_extension(ipython):
     _load_httpfs_ext()
     conn = _get_conn()
     ipython.push({'conn': conn})
+    ipython.run_line_magic("load_ext", "sql")
     ipython.run_line_magic("sql", "conn --alias duckdb")
     ipython.run_line_magic("sql", "LOAD httpfs;")
     ipython.run_line_magic("config", "SqlMagic.autopandas = True")
