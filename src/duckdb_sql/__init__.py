@@ -1,8 +1,5 @@
 import os
-import dotenv
 import duckdb
-
-dotenv.load_dotenv("~/.env", override=True)
 
 
 def _load_httpfs_ext():
