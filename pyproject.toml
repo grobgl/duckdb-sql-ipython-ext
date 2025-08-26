@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "duckdb-sql"
+version = "0.1.0"
+description = "A Jupyter extension for using DuckDB with SQL (via jupysql)."
+authors = [
+  { name="Georg Grob" }
+]
+dependencies = [
+  "jupysql",
+  "duckdb",
+  "duckdb-engine",
+  "python-dotenv"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
